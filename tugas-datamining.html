@@ -54,7 +54,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="Home Page" href="intro.html" />
+    <link rel="prev" title="Kumpulan Tugas" href="intro.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -110,7 +110,7 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="intro.html">
-                    Home Page
+                    Kumpulan Tugas
                 </a>
             </li>
         </ul>
@@ -355,6 +355,27 @@ title="Print to PDF"
   </a>
   <ul class="visible nav section-nav flex-column">
    <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#mencari-data-dari-url">
+     <strong>
+      Mencari data dari url
+     </strong>
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#membaca-data-url">
+     <strong>
+      Membaca data url
+     </strong>
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#distraksi-dengan-equal-width-dan-equal-frequency">
+     <strong>
+      1. Distraksi dengan equal width dan equal frequency
+     </strong>
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#equal-width">
      <strong>
       1.1 Equal Width
@@ -365,6 +386,13 @@ title="Print to PDF"
     <a class="reference internal nav-link" href="#equal-frequency">
      <strong>
       1.2 Equal Frequency
+     </strong>
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#entrophy">
+     <strong>
+      2. Entrophy
      </strong>
     </a>
    </li>
@@ -418,6 +446,27 @@ title="Print to PDF"
   </a>
   <ul class="visible nav section-nav flex-column">
    <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#mencari-data-dari-url">
+     <strong>
+      Mencari data dari url
+     </strong>
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#membaca-data-url">
+     <strong>
+      Membaca data url
+     </strong>
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#distraksi-dengan-equal-width-dan-equal-frequency">
+     <strong>
+      1. Distraksi dengan equal width dan equal frequency
+     </strong>
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#equal-width">
      <strong>
       1.1 Equal Width
@@ -428,6 +477,13 @@ title="Print to PDF"
     <a class="reference internal nav-link" href="#equal-frequency">
      <strong>
       1.2 Equal Frequency
+     </strong>
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#entrophy">
+     <strong>
+      2. Entrophy
      </strong>
     </a>
    </li>
@@ -474,7 +530,7 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-71d6f189-6057-48e7-8d88-441b0d059899">
+  <div id="df-17cd9883-f2ff-4f90-bd61-4c5f05db4580">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -761,7 +817,7 @@ title="Print to PDF"
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-71d6f189-6057-48e7-8d88-441b0d059899')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-17cd9883-f2ff-4f90-bd61-4c5f05db4580')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -812,12 +868,12 @@ title="Print to PDF"
 
       <script>
         const buttonEl =
-          document.querySelector('#df-71d6f189-6057-48e7-8d88-441b0d059899 button.colab-df-convert');
+          document.querySelector('#df-17cd9883-f2ff-4f90-bd61-4c5f05db4580 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-71d6f189-6057-48e7-8d88-441b0d059899');
+          const element = document.querySelector('#df-17cd9883-f2ff-4f90-bd61-4c5f05db4580');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -1028,9 +1084,12 @@ penjelasan:</p>
 <li><p>Lakukan proses diskritisasi dengan basis <em>entropy</em></p></li>
 <li><p>Kumpulkan tugas dengan link github ( web statis dari jupyter book)</p></li>
 </ol>
-<p>###<strong>Mencari data dari url</strong>
-data_iris = <a class="reference external" href="https://raw.githubusercontent.com/HanifSantoso05/dataset_matkul/main/Iris.csv">https://raw.githubusercontent.com/HanifSantoso05/dataset_matkul/main/Iris.csv</a></p>
-<p>###<strong>Membaca data url</strong></p>
+<section id="mencari-data-dari-url">
+<h2><strong>Mencari data dari url</strong><a class="headerlink" href="#mencari-data-dari-url" title="Permalink to this headline">#</a></h2>
+<p>data_iris = <a class="reference external" href="https://raw.githubusercontent.com/HanifSantoso05/dataset_matkul/main/Iris.csv">https://raw.githubusercontent.com/HanifSantoso05/dataset_matkul/main/Iris.csv</a></p>
+</section>
+<section id="membaca-data-url">
+<h2><strong>Membaca data url</strong><a class="headerlink" href="#membaca-data-url" title="Permalink to this headline">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
@@ -1045,7 +1104,7 @@ data_iris = <a class="reference external" href="https://raw.githubusercontent.co
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-00041697-f254-49a4-b4bc-c4db819f1d3a">
+  <div id="df-170cf7e4-bc56-479e-ad8c-bab6acd144a7">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -1165,7 +1224,7 @@ data_iris = <a class="reference external" href="https://raw.githubusercontent.co
 </table>
 <p>150 rows × 5 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-00041697-f254-49a4-b4bc-c4db819f1d3a')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-170cf7e4-bc56-479e-ad8c-bab6acd144a7')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -1216,12 +1275,12 @@ data_iris = <a class="reference external" href="https://raw.githubusercontent.co
 
       <script>
         const buttonEl =
-          document.querySelector('#df-00041697-f254-49a4-b4bc-c4db819f1d3a button.colab-df-convert');
+          document.querySelector('#df-170cf7e4-bc56-479e-ad8c-bab6acd144a7 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-00041697-f254-49a4-b4bc-c4db819f1d3a');
+          const element = document.querySelector('#df-170cf7e4-bc56-479e-ad8c-bab6acd144a7');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -1242,13 +1301,12 @@ data_iris = <a class="reference external" href="https://raw.githubusercontent.co
   </div>
 </div></div>
 </div>
-<p>###<strong>1. Distraksi dengan equal width dan equal frequency</strong>
-<strong>Distraksi</strong> merupakan transformasi kolom menjadi type data lain. Tujuannya untuk membuat data menjadi lebih optimal yang nantinya memudahkan untuk di analisis</p>
+</section>
+<section id="distraksi-dengan-equal-width-dan-equal-frequency">
+<h2><strong>1. Distraksi dengan equal width dan equal frequency</strong><a class="headerlink" href="#distraksi-dengan-equal-width-dan-equal-frequency" title="Permalink to this headline">#</a></h2>
+<p><strong>Distraksi</strong> merupakan transformasi kolom menjadi type data lain. Tujuannya untuk membuat data menjadi lebih optimal yang nantinya memudahkan untuk di analisis</p>
 <blockquote>
 <div></div></blockquote>
-<section id="equal-width">
-<h2><strong>1.1 Equal Width</strong><a class="headerlink" href="#equal-width" title="Permalink to this headline">#</a></h2>
-</section>
 <blockquote>
 <div><p>Equal-width intervals adalah discretization yang membagi data numerik menjadi beberapa kelompok dengan lebar kelompok yang kurang lebih sama besar.</p>
 </div></blockquote>
@@ -1284,7 +1342,7 @@ data_iris = <a class="reference external" href="https://raw.githubusercontent.co
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-f1a9e56a-be46-4d2e-8e1d-302a04eb38cd">
+  <div id="df-d8008cec-1fef-44ac-b3ba-7ebb916186df">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -1368,7 +1426,7 @@ data_iris = <a class="reference external" href="https://raw.githubusercontent.co
 </table>
 <p>150 rows × 2 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-f1a9e56a-be46-4d2e-8e1d-302a04eb38cd')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-d8008cec-1fef-44ac-b3ba-7ebb916186df')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -1419,12 +1477,12 @@ data_iris = <a class="reference external" href="https://raw.githubusercontent.co
 
       <script>
         const buttonEl =
-          document.querySelector('#df-f1a9e56a-be46-4d2e-8e1d-302a04eb38cd button.colab-df-convert');
+          document.querySelector('#df-d8008cec-1fef-44ac-b3ba-7ebb916186df button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-f1a9e56a-be46-4d2e-8e1d-302a04eb38cd');
+          const element = document.querySelector('#df-d8008cec-1fef-44ac-b3ba-7ebb916186df');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -1444,7 +1502,7 @@ data_iris = <a class="reference external" href="https://raw.githubusercontent.co
     </div>
   </div>
 </div><div class="output text_html">
-  <div id="df-a67168a1-a41c-4381-a5da-0d6229f10ddb">
+  <div id="df-47eb3eeb-d054-4018-b88d-069832ea3743">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -1528,7 +1586,7 @@ data_iris = <a class="reference external" href="https://raw.githubusercontent.co
 </table>
 <p>150 rows × 2 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-a67168a1-a41c-4381-a5da-0d6229f10ddb')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-47eb3eeb-d054-4018-b88d-069832ea3743')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -1579,12 +1637,12 @@ data_iris = <a class="reference external" href="https://raw.githubusercontent.co
 
       <script>
         const buttonEl =
-          document.querySelector('#df-a67168a1-a41c-4381-a5da-0d6229f10ddb button.colab-df-convert');
+          document.querySelector('#df-47eb3eeb-d054-4018-b88d-069832ea3743 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-a67168a1-a41c-4381-a5da-0d6229f10ddb');
+          const element = document.querySelector('#df-47eb3eeb-d054-4018-b88d-069832ea3743');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -1604,7 +1662,7 @@ data_iris = <a class="reference external" href="https://raw.githubusercontent.co
     </div>
   </div>
 </div><div class="output text_html">
-  <div id="df-df2a74cb-809e-4c4f-9d7f-7a45a4b2b306">
+  <div id="df-6b701548-9ea6-4b76-82d9-032f1ee90525">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -1688,7 +1746,7 @@ data_iris = <a class="reference external" href="https://raw.githubusercontent.co
 </table>
 <p>150 rows × 2 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-df2a74cb-809e-4c4f-9d7f-7a45a4b2b306')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-6b701548-9ea6-4b76-82d9-032f1ee90525')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -1739,12 +1797,12 @@ data_iris = <a class="reference external" href="https://raw.githubusercontent.co
 
       <script>
         const buttonEl =
-          document.querySelector('#df-df2a74cb-809e-4c4f-9d7f-7a45a4b2b306 button.colab-df-convert');
+          document.querySelector('#df-6b701548-9ea6-4b76-82d9-032f1ee90525 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-df2a74cb-809e-4c4f-9d7f-7a45a4b2b306');
+          const element = document.querySelector('#df-6b701548-9ea6-4b76-82d9-032f1ee90525');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -1764,7 +1822,7 @@ data_iris = <a class="reference external" href="https://raw.githubusercontent.co
     </div>
   </div>
 </div><div class="output text_html">
-  <div id="df-7ae2dcbc-fc0c-42a3-8da3-d084ee510938">
+  <div id="df-0902e0d2-3dfa-4fd4-b4a6-96f861a3afb4">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -1848,7 +1906,7 @@ data_iris = <a class="reference external" href="https://raw.githubusercontent.co
 </table>
 <p>150 rows × 2 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-7ae2dcbc-fc0c-42a3-8da3-d084ee510938')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-0902e0d2-3dfa-4fd4-b4a6-96f861a3afb4')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -1899,12 +1957,12 @@ data_iris = <a class="reference external" href="https://raw.githubusercontent.co
 
       <script>
         const buttonEl =
-          document.querySelector('#df-7ae2dcbc-fc0c-42a3-8da3-d084ee510938 button.colab-df-convert');
+          document.querySelector('#df-0902e0d2-3dfa-4fd4-b4a6-96f861a3afb4 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-7ae2dcbc-fc0c-42a3-8da3-d084ee510938');
+          const element = document.querySelector('#df-0902e0d2-3dfa-4fd4-b4a6-96f861a3afb4');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -1949,7 +2007,7 @@ data_iris = <a class="reference external" href="https://raw.githubusercontent.co
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-a869c55f-dc85-4fa3-8f31-43c9c026c4b1">
+  <div id="df-b14fec58-4a4b-4d25-9f9f-6f14a50bf531">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -2117,7 +2175,7 @@ data_iris = <a class="reference external" href="https://raw.githubusercontent.co
 </table>
 <p>150 rows × 9 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-a869c55f-dc85-4fa3-8f31-43c9c026c4b1')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-b14fec58-4a4b-4d25-9f9f-6f14a50bf531')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -2168,12 +2226,12 @@ data_iris = <a class="reference external" href="https://raw.githubusercontent.co
 
       <script>
         const buttonEl =
-          document.querySelector('#df-a869c55f-dc85-4fa3-8f31-43c9c026c4b1 button.colab-df-convert');
+          document.querySelector('#df-b14fec58-4a4b-4d25-9f9f-6f14a50bf531 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-a869c55f-dc85-4fa3-8f31-43c9c026c4b1');
+          const element = document.querySelector('#df-b14fec58-4a4b-4d25-9f9f-6f14a50bf531');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -2196,9 +2254,6 @@ data_iris = <a class="reference external" href="https://raw.githubusercontent.co
 </div>
 <blockquote>
 <div></div></blockquote>
-<section id="equal-frequency">
-<h2><strong>1.2 Equal Frequency</strong><a class="headerlink" href="#equal-frequency" title="Permalink to this headline">#</a></h2>
-</section>
 <blockquote>
 <div><p>Equal-frequency intervals adalah discretization yang membagi data numerik menjadi beberapa kelompok dengan jumlah anggota yang kurang lebih sama besar.</p>
 </div></blockquote>
@@ -2230,7 +2285,7 @@ data_iris = <a class="reference external" href="https://raw.githubusercontent.co
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-980f4d37-80b4-48ce-aa47-4b459540e396">
+  <div id="df-9e21d1d3-e588-4db4-b042-b55af8828c1a">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -2314,7 +2369,7 @@ data_iris = <a class="reference external" href="https://raw.githubusercontent.co
 </table>
 <p>150 rows × 2 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-980f4d37-80b4-48ce-aa47-4b459540e396')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-9e21d1d3-e588-4db4-b042-b55af8828c1a')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -2365,12 +2420,12 @@ data_iris = <a class="reference external" href="https://raw.githubusercontent.co
 
       <script>
         const buttonEl =
-          document.querySelector('#df-980f4d37-80b4-48ce-aa47-4b459540e396 button.colab-df-convert');
+          document.querySelector('#df-9e21d1d3-e588-4db4-b042-b55af8828c1a button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-980f4d37-80b4-48ce-aa47-4b459540e396');
+          const element = document.querySelector('#df-9e21d1d3-e588-4db4-b042-b55af8828c1a');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -2390,7 +2445,7 @@ data_iris = <a class="reference external" href="https://raw.githubusercontent.co
     </div>
   </div>
 </div><div class="output text_html">
-  <div id="df-5c4d2520-61ce-41bb-a9a3-388587b2aa29">
+  <div id="df-578a71f3-5cfc-4fcf-82c1-dc8e3041da52">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -2474,7 +2529,7 @@ data_iris = <a class="reference external" href="https://raw.githubusercontent.co
 </table>
 <p>150 rows × 2 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-5c4d2520-61ce-41bb-a9a3-388587b2aa29')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-578a71f3-5cfc-4fcf-82c1-dc8e3041da52')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -2525,12 +2580,12 @@ data_iris = <a class="reference external" href="https://raw.githubusercontent.co
 
       <script>
         const buttonEl =
-          document.querySelector('#df-5c4d2520-61ce-41bb-a9a3-388587b2aa29 button.colab-df-convert');
+          document.querySelector('#df-578a71f3-5cfc-4fcf-82c1-dc8e3041da52 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-5c4d2520-61ce-41bb-a9a3-388587b2aa29');
+          const element = document.querySelector('#df-578a71f3-5cfc-4fcf-82c1-dc8e3041da52');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -2550,7 +2605,7 @@ data_iris = <a class="reference external" href="https://raw.githubusercontent.co
     </div>
   </div>
 </div><div class="output text_html">
-  <div id="df-6ea6d8a9-6745-4025-864f-2c1b260f0905">
+  <div id="df-d31bfe47-6a27-4511-9a9f-5863e2094153">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -2634,7 +2689,7 @@ data_iris = <a class="reference external" href="https://raw.githubusercontent.co
 </table>
 <p>150 rows × 2 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-6ea6d8a9-6745-4025-864f-2c1b260f0905')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-d31bfe47-6a27-4511-9a9f-5863e2094153')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -2685,12 +2740,12 @@ data_iris = <a class="reference external" href="https://raw.githubusercontent.co
 
       <script>
         const buttonEl =
-          document.querySelector('#df-6ea6d8a9-6745-4025-864f-2c1b260f0905 button.colab-df-convert');
+          document.querySelector('#df-d31bfe47-6a27-4511-9a9f-5863e2094153 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-6ea6d8a9-6745-4025-864f-2c1b260f0905');
+          const element = document.querySelector('#df-d31bfe47-6a27-4511-9a9f-5863e2094153');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -2710,7 +2765,7 @@ data_iris = <a class="reference external" href="https://raw.githubusercontent.co
     </div>
   </div>
 </div><div class="output text_html">
-  <div id="df-f0efb32e-1e6e-4de1-a876-60cff0d58047">
+  <div id="df-3166e515-4308-4466-90d0-0404d04ecd65">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -2794,7 +2849,7 @@ data_iris = <a class="reference external" href="https://raw.githubusercontent.co
 </table>
 <p>150 rows × 2 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-f0efb32e-1e6e-4de1-a876-60cff0d58047')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-3166e515-4308-4466-90d0-0404d04ecd65')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -2845,12 +2900,12 @@ data_iris = <a class="reference external" href="https://raw.githubusercontent.co
 
       <script>
         const buttonEl =
-          document.querySelector('#df-f0efb32e-1e6e-4de1-a876-60cff0d58047 button.colab-df-convert');
+          document.querySelector('#df-3166e515-4308-4466-90d0-0404d04ecd65 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-f0efb32e-1e6e-4de1-a876-60cff0d58047');
+          const element = document.querySelector('#df-3166e515-4308-4466-90d0-0404d04ecd65');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -2894,7 +2949,7 @@ data_iris = <a class="reference external" href="https://raw.githubusercontent.co
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-4f15b000-75b8-4577-82ef-900daea500cf">
+  <div id="df-6e04c4c8-d398-4ca2-a78a-dfe436895289">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -3062,7 +3117,7 @@ data_iris = <a class="reference external" href="https://raw.githubusercontent.co
 </table>
 <p>150 rows × 9 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-4f15b000-75b8-4577-82ef-900daea500cf')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-6e04c4c8-d398-4ca2-a78a-dfe436895289')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -3113,12 +3168,12 @@ data_iris = <a class="reference external" href="https://raw.githubusercontent.co
 
       <script>
         const buttonEl =
-          document.querySelector('#df-4f15b000-75b8-4577-82ef-900daea500cf button.colab-df-convert');
+          document.querySelector('#df-6e04c4c8-d398-4ca2-a78a-dfe436895289 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-4f15b000-75b8-4577-82ef-900daea500cf');
+          const element = document.querySelector('#df-6e04c4c8-d398-4ca2-a78a-dfe436895289');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -3164,7 +3219,7 @@ data_iris = <a class="reference external" href="https://raw.githubusercontent.co
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-6edd62ff-6fca-4110-95b0-483334773143">
+  <div id="df-9e4f86e5-b382-4ec0-bdcb-4ee3f8107e69">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -3368,7 +3423,7 @@ data_iris = <a class="reference external" href="https://raw.githubusercontent.co
 </table>
 <p>150 rows × 12 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-6edd62ff-6fca-4110-95b0-483334773143')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-9e4f86e5-b382-4ec0-bdcb-4ee3f8107e69')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -3419,12 +3474,12 @@ data_iris = <a class="reference external" href="https://raw.githubusercontent.co
 
       <script>
         const buttonEl =
-          document.querySelector('#df-6edd62ff-6fca-4110-95b0-483334773143 button.colab-df-convert');
+          document.querySelector('#df-9e4f86e5-b382-4ec0-bdcb-4ee3f8107e69 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-6edd62ff-6fca-4110-95b0-483334773143');
+          const element = document.querySelector('#df-9e4f86e5-b382-4ec0-bdcb-4ee3f8107e69');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -3445,7 +3500,15 @@ data_iris = <a class="reference external" href="https://raw.githubusercontent.co
   </div>
 </div></div>
 </div>
-<p>###<strong>2. Entrophy</strong></p>
+</section>
+<section id="equal-width">
+<h2><strong>1.1 Equal Width</strong><a class="headerlink" href="#equal-width" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="equal-frequency">
+<h2><strong>1.2 Equal Frequency</strong><a class="headerlink" href="#equal-frequency" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="entrophy">
+<h2><strong>2. Entrophy</strong><a class="headerlink" href="#entrophy" title="Permalink to this headline">#</a></h2>
 <p><strong>Diskritisasi berbasis entropi</strong> (entropy based discretization) adalah salah satu jenis algoritma diskritisasi terawasi yang menggunakan mekanisme top- down. Tujuan dari algoritma ini adalah mendapatkan partisi yang mengandung baris data dari kelas yang sama sebanyak mungkin.</p>
 <p>Rumus Entrophy:<br />
 <img alt="image.png" src="https://cdn.mathpix.com/snip/images/T3MAnkOgvu54ASi68sQ5fR96rPCLPxjYofOqC9L4IpM.original.fullsize.png" /></p>
@@ -3463,7 +3526,7 @@ data_iris = <a class="reference external" href="https://raw.githubusercontent.co
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-deab7546-859d-4f43-8418-65920f2e8aca">
+  <div id="df-d9e704ee-dd02-4eae-958d-61420c9ce2bf">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -3522,7 +3585,7 @@ data_iris = <a class="reference external" href="https://raw.githubusercontent.co
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-deab7546-859d-4f43-8418-65920f2e8aca')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-d9e704ee-dd02-4eae-958d-61420c9ce2bf')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -3573,12 +3636,12 @@ data_iris = <a class="reference external" href="https://raw.githubusercontent.co
 
       <script>
         const buttonEl =
-          document.querySelector('#df-deab7546-859d-4f43-8418-65920f2e8aca button.colab-df-convert');
+          document.querySelector('#df-d9e704ee-dd02-4eae-958d-61420c9ce2bf button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-deab7546-859d-4f43-8418-65920f2e8aca');
+          const element = document.querySelector('#df-d9e704ee-dd02-4eae-958d-61420c9ce2bf');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -3610,7 +3673,7 @@ data_iris = <a class="reference external" href="https://raw.githubusercontent.co
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-415a28f0-4fb6-4a3b-aa22-3997e653e551">
+  <div id="df-646bcfdd-97ba-4ece-95d8-85827424ea77">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -3694,7 +3757,7 @@ data_iris = <a class="reference external" href="https://raw.githubusercontent.co
 </table>
 <p>150 rows × 2 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-415a28f0-4fb6-4a3b-aa22-3997e653e551')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-646bcfdd-97ba-4ece-95d8-85827424ea77')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -3745,12 +3808,12 @@ data_iris = <a class="reference external" href="https://raw.githubusercontent.co
 
       <script>
         const buttonEl =
-          document.querySelector('#df-415a28f0-4fb6-4a3b-aa22-3997e653e551 button.colab-df-convert');
+          document.querySelector('#df-646bcfdd-97ba-4ece-95d8-85827424ea77 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-415a28f0-4fb6-4a3b-aa22-3997e653e551');
+          const element = document.querySelector('#df-646bcfdd-97ba-4ece-95d8-85827424ea77');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -3903,6 +3966,7 @@ data_iris = <a class="reference external" href="https://raw.githubusercontent.co
 </div>
 </div>
 </div>
+</section>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="tugas-3-implementasi-algoritma-k-nn">
 <h1><strong>Tugas 3 - Implementasi Algoritma K-NN</strong><a class="headerlink" href="#tugas-3-implementasi-algoritma-k-nn" title="Permalink to this headline">#</a></h1>
@@ -4374,7 +4438,7 @@ setosa
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Home Page</p>
+            <p class="prev-next-title">Kumpulan Tugas</p>
         </div>
     </a>
 </div>
