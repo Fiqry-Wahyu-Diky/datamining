@@ -117,7 +117,7 @@ const thebe_selector_output = ".output, .cell_output"
   Tugas
  </span>
 </p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="Tugas%201.html">
    <strong>
@@ -160,6 +160,13 @@ const thebe_selector_output = ".output, .cell_output"
    </strong>
   </a>
  </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  UTS
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
    <strong>
@@ -513,7 +520,7 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-d8411036-888a-4ac4-8563-3dcd1416d8fb">
+  <div id="df-a07fe271-c732-4a4b-8b0f-ce93c055f991">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -693,7 +700,7 @@ title="Print to PDF"
 </table>
 <p>116 rows × 10 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-d8411036-888a-4ac4-8563-3dcd1416d8fb')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-a07fe271-c732-4a4b-8b0f-ce93c055f991')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -744,12 +751,12 @@ title="Print to PDF"
 
       <script>
         const buttonEl =
-          document.querySelector('#df-d8411036-888a-4ac4-8563-3dcd1416d8fb button.colab-df-convert');
+          document.querySelector('#df-a07fe271-c732-4a4b-8b0f-ce93c055f991 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-d8411036-888a-4ac4-8563-3dcd1416d8fb');
+          const element = document.querySelector('#df-a07fe271-c732-4a4b-8b0f-ce93c055f991');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -819,7 +826,7 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-64f56a8f-e941-44ac-93bd-fa9a87d201a0">
+  <div id="df-2219342e-17be-4e0d-bb7d-9526c0900169">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -920,7 +927,7 @@ title="Print to PDF"
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-64f56a8f-e941-44ac-93bd-fa9a87d201a0')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-2219342e-17be-4e0d-bb7d-9526c0900169')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -971,12 +978,12 @@ title="Print to PDF"
 
       <script>
         const buttonEl =
-          document.querySelector('#df-64f56a8f-e941-44ac-93bd-fa9a87d201a0 button.colab-df-convert');
+          document.querySelector('#df-2219342e-17be-4e0d-bb7d-9526c0900169 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-64f56a8f-e941-44ac-93bd-fa9a87d201a0');
+          const element = document.querySelector('#df-2219342e-17be-4e0d-bb7d-9526c0900169');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -1131,6 +1138,82 @@ Score data uji     : 0.6666666666666666
 </div>
 </div>
 </div>
+<p>grafik</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#import the KNeighborsClassifier class from sklearn</span>
+<span class="kn">from</span> <span class="nn">sklearn.neighbors</span> <span class="kn">import</span> <span class="n">KNeighborsClassifier</span>
+
+<span class="c1">#import metrics model to check the accuracy </span>
+<span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">metrics</span>
+<span class="c1">#Try running from k=3 through 25 and record testing accuracy</span>
+<span class="n">k_range</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">26</span><span class="p">)</span>
+<span class="n">scores</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="n">scores_list</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">k_range</span><span class="p">:</span>
+        <span class="n">knn</span> <span class="o">=</span> <span class="n">KNeighborsClassifier</span><span class="p">(</span><span class="n">n_neighbors</span><span class="o">=</span><span class="n">k</span><span class="p">)</span>
+        <span class="n">knn</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span><span class="n">y_train</span><span class="p">)</span>
+        <span class="n">y_pred</span><span class="o">=</span><span class="n">knn</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+        <span class="n">scores</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">metrics</span><span class="o">.</span><span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span><span class="n">y_pred</span><span class="p">)</span>
+        <span class="n">scores_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">metrics</span><span class="o">.</span><span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span><span class="n">y_pred</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Testing accuracy for each value of K</span>
+<span class="n">scores</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{3: 0.4583333333333333,
+ 4: 0.4166666666666667,
+ 5: 0.5,
+ 6: 0.4583333333333333,
+ 7: 0.4166666666666667,
+ 8: 0.375,
+ 9: 0.5,
+ 10: 0.5,
+ 11: 0.4583333333333333,
+ 12: 0.5416666666666666,
+ 13: 0.5833333333333334,
+ 14: 0.5416666666666666,
+ 15: 0.5833333333333334,
+ 16: 0.5833333333333334,
+ 17: 0.5833333333333334,
+ 18: 0.5833333333333334,
+ 19: 0.5416666666666666,
+ 20: 0.5416666666666666,
+ 21: 0.4583333333333333,
+ 22: 0.5,
+ 23: 0.5416666666666666,
+ 24: 0.5,
+ 25: 0.4583333333333333}
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> inline
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="c1">#plot the relationship between K and the testing accuracy</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">k_range</span><span class="p">,</span><span class="n">scores_list</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Value of K for KNN&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Testing Accuracy&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;Testing Accuracy&#39;)
+</pre></div>
+</div>
+<img alt="_images/UTS_25_1.png" src="_images/UTS_25_1.png" />
+</div>
+</div>
 </section>
 <section id="decission-tree">
 <h2><strong>Decission Tree</strong><a class="headerlink" href="#decission-tree" title="Permalink to this headline">#</a></h2>
@@ -1173,7 +1256,7 @@ Name: Classification, dtype: int64
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-f9372378-36f8-4b40-b551-c730882a36e6">
+  <div id="df-751970ab-57ef-4d99-b44f-a8782e7701da">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -1268,7 +1351,7 @@ Name: Classification, dtype: int64
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-f9372378-36f8-4b40-b551-c730882a36e6')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-751970ab-57ef-4d99-b44f-a8782e7701da')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -1319,12 +1402,12 @@ Name: Classification, dtype: int64
 
       <script>
         const buttonEl =
-          document.querySelector('#df-f9372378-36f8-4b40-b551-c730882a36e6 button.colab-df-convert');
+          document.querySelector('#df-751970ab-57ef-4d99-b44f-a8782e7701da button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-f9372378-36f8-4b40-b551-c730882a36e6');
+          const element = document.querySelector('#df-751970ab-57ef-4d99-b44f-a8782e7701da');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -1385,7 +1468,7 @@ Name: Classification, dtype: int64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/UTS_30_0.png" src="_images/UTS_30_0.png" />
+<img alt="_images/UTS_34_0.png" src="_images/UTS_34_0.png" />
 </div>
 </div>
 <p>menghitung nilai akurasi dari data latih dan data uji</p>
