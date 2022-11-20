@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>datamining &#8212; Data Mining</title>
+    <title>&lt;no title&gt; &#8212; Data Mining</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -224,6 +224,53 @@ title="Toggle navigation"
         
     </div>
     <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/Fiqry-Wahyu-Diky/datamining/gh-pages?urlpath=tree/_sources/Tugas 8.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://colab.research.google.com/github/Fiqry-Wahyu-Diky/datamining/blob/gh-pages/_sources/Tugas 8.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Colab"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="_static/images/logo_colab.png">
+  </span>
+<span class="headerbtn__text-container">Colab</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
 <button onclick="toggleFullScreen()"
   class="headerbtn"
   data-toggle="tooltip"
@@ -263,7 +310,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/Fiqry-Wahyu-Diky/datamining/issues/new?title=Issue%20on%20page%20%2FREADME.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/Fiqry-Wahyu-Diky/datamining/issues/new?title=Issue%20on%20page%20%2FTugas 8.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -291,7 +338,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="_sources/README.md"
+        <a href="_sources/Tugas 8.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -302,7 +349,7 @@ title="Download source file"
 <span class="headerbtn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="headerbtn__text-container">.md</span>
+<span class="headerbtn__text-container">.ipynb</span>
 </a>
 
       </li>
@@ -328,23 +375,50 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+    </nav>
 </div>
     </div>
     <div class="article row">
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>datamining</h1>
+                <h1><no title></h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -352,9 +426,90 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="datamining">
-<h1>datamining<a class="headerlink" href="#datamining" title="Permalink to this headline">#</a></h1>
-</section>
+  <div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">LinearRegression</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="kn">import</span> <span class="n">make_regression</span>
+<span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">pyplot</span>
+<span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">make_regression</span><span class="p">(</span><span class="n">n_samples</span><span class="o">=</span><span class="mi">150</span><span class="p">,</span> <span class="n">n_features</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">noise</span><span class="o">=</span><span class="mf">0.2</span><span class="p">)</span>
+<span class="n">pyplot</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span><span class="n">y_test</span><span class="p">)</span>
+<span class="n">reg</span> <span class="o">=</span> <span class="n">LinearRegression</span><span class="p">()</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span><span class="n">y_test</span><span class="p">)</span>
+<span class="n">pyplot</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="n">reg</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span><span class="n">y_test</span><span class="p">)</span>
+<span class="n">reg</span><span class="o">.</span><span class="n">coef_</span>
+<span class="n">reg</span><span class="o">.</span><span class="n">intercept_</span>
+<span class="n">reg</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([]))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Tugas 8_1_0.png" src="_images/Tugas 8_1_0.png" />
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">ValueError</span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">2</span><span class="o">-</span><span class="mi">32527</span><span class="n">a9a4c11</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">9</span> <span class="n">reg</span><span class="o">.</span><span class="n">coef_</span>
+<span class="g g-Whitespace">     </span><span class="mi">10</span> <span class="n">reg</span><span class="o">.</span><span class="n">intercept_</span>
+<span class="ne">---&gt; </span><span class="mi">11</span> <span class="n">reg</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([]))</span>
+
+<span class="nn">/usr/local/lib/python3.7/dist-packages/sklearn/linear_model/_base.py</span> in <span class="ni">predict</span><span class="nt">(self, X)</span>
+<span class="g g-Whitespace">    </span><span class="mi">360</span>             <span class="n">Returns</span> <span class="n">predicted</span> <span class="n">values</span><span class="o">.</span>
+<span class="g g-Whitespace">    </span><span class="mi">361</span>         <span class="s2">&quot;&quot;&quot;</span>
+<span class="ne">--&gt; </span><span class="mi">362</span><span class="s2">         return self._decision_function(X)</span>
+<span class="g g-Whitespace">    </span><span class="mi">363</span><span class="s2"> </span>
+<span class="g g-Whitespace">    </span><span class="mi">364</span><span class="s2">     _preprocess_data = staticmethod(_preprocess_data)</span>
+
+<span class="nn">/usr/local/lib/python3.7/dist-packages/sklearn/linear_model/_base.py</span> in <span class="ni">_decision_function</span><span class="nt">(self, X)</span>
+<span class="g g-Whitespace">    </span><span class="mi">343</span><span class="s2">         check_is_fitted(self)</span>
+<span class="g g-Whitespace">    </span><span class="mi">344</span><span class="s2"> </span>
+<span class="ne">--&gt; </span><span class="mi">345</span><span class="s2">         X = self._validate_data(X, accept_sparse=[&quot;csr&quot;, &quot;csc&quot;, &quot;coo&quot;], reset=False)</span>
+<span class="g g-Whitespace">    </span><span class="mi">346</span><span class="s2">         return safe_sparse_dot(X, self.coef_.T, dense_output=True) + self.intercept_</span>
+<span class="g g-Whitespace">    </span><span class="mi">347</span><span class="s2"> </span>
+
+<span class="nn">/usr/local/lib/python3.7/dist-packages/sklearn/base.py</span> in <span class="ni">_validate_data</span><span class="nt">(self, X, y, reset, validate_separately, **check_params)</span>
+<span class="g g-Whitespace">    </span><span class="mi">564</span><span class="s2">             raise ValueError(&quot;Validation should be done on X, y or both.&quot;)</span>
+<span class="g g-Whitespace">    </span><span class="mi">565</span><span class="s2">         elif not no_val_X and no_val_y:</span>
+<span class="ne">--&gt; </span><span class="mi">566</span><span class="s2">             X = check_array(X, **check_params)</span>
+<span class="g g-Whitespace">    </span><span class="mi">567</span><span class="s2">             out = X</span>
+<span class="g g-Whitespace">    </span><span class="mi">568</span><span class="s2">         elif no_val_X and not no_val_y:</span>
+
+<span class="nn">/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py</span> in <span class="ni">check_array</span><span class="nt">(array, accept_sparse, accept_large_sparse, dtype, order, copy, force_all_finite, ensure_2d, allow_nd, ensure_min_samples, ensure_min_features, estimator)</span>
+<span class="g g-Whitespace">    </span><span class="mi">771</span><span class="s2">                     &quot;Reshape your data either using array.reshape(-1, 1) if &quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">772</span><span class="s2">                     &quot;your data has a single feature or array.reshape(1, -1) &quot;</span>
+<span class="ne">--&gt; </span><span class="mi">773</span><span class="s2">                     &quot;if it contains a single sample.&quot;.format(array)</span>
+<span class="g g-Whitespace">    </span><span class="mi">774</span><span class="s2">                 )</span>
+<span class="g g-Whitespace">    </span><span class="mi">775</span><span class="s2"> </span>
+
+<span class="ne">ValueError</span>: Expected 2D array, got 1D array instead:
+<span class="s2">array=[].</span>
+<span class="s2">Reshape your data either using array.reshape(-1, 1) if your data has a single feature or array.reshape(1, -1) if it contains a single sample.</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">reg</span><span class="o">.</span><span class="n">coef_</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">4</span><span class="o">-</span><span class="mi">0</span><span class="n">a4ca4410be9</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">reg</span><span class="o">.</span><span class="n">coef_</span><span class="p">()</span>
+
+<span class="ne">TypeError</span>: &#39;numpy.ndarray&#39; object is not callable
+</pre></div>
+</div>
+</div>
+</div>
 
     <script type="text/x-thebe-config">
     {

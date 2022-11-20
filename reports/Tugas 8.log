@@ -1,0 +1,74 @@
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/jupyter_cache/executors/utils.py", line 56, in single_nb_execution
+    record_timing=False,
+  File "/usr/local/lib/python3.7/dist-packages/nbclient/client.py", line 1204, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+  File "/usr/local/lib/python3.7/dist-packages/nbclient/util.py", line 84, in wrapped
+    return just_run(coro(*args, **kwargs))
+  File "/usr/local/lib/python3.7/dist-packages/nbclient/util.py", line 62, in just_run
+    return loop.run_until_complete(coro)
+  File "/usr/lib/python3.7/asyncio/base_events.py", line 587, in run_until_complete
+    return future.result()
+  File "/usr/local/lib/python3.7/dist-packages/nbclient/client.py", line 664, in async_execute
+    cell, index, execution_count=self.code_cells_executed + 1
+  File "/usr/local/lib/python3.7/dist-packages/nbclient/client.py", line 965, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "/usr/local/lib/python3.7/dist-packages/nbclient/client.py", line 862, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+from sklearn.datasets import make_regression
+from matplotlib import pyplot
+X_test, y_test = make_regression(n_samples=150, n_features=1, noise=0.2)
+pyplot.scatter(X_test,y_test)
+reg = LinearRegression().fit(X_test,y_test)
+pyplot.show()
+
+reg.score(X_test,y_test)
+reg.coef_
+reg.intercept_
+reg.predict(np.array([]))
+------------------
+
+[0;31m[0m
+[0;31mValueError[0mTraceback (most recent call last)
+[0;32m<ipython-input-2-32527a9a4c11>[0m in [0;36m<module>[0;34m[0m
+[1;32m      9[0m [0mreg[0m[0;34m.[0m[0mcoef_[0m[0;34m[0m[0;34m[0m[0m
+[1;32m     10[0m [0mreg[0m[0;34m.[0m[0mintercept_[0m[0;34m[0m[0;34m[0m[0m
+[0;32m---> 11[0;31m [0mreg[0m[0;34m.[0m[0mpredict[0m[0;34m([0m[0mnp[0m[0;34m.[0m[0marray[0m[0;34m([0m[0;34m[[0m[0;34m][0m[0;34m)[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m
+[0;32m/usr/local/lib/python3.7/dist-packages/sklearn/linear_model/_base.py[0m in [0;36mpredict[0;34m(self, X)[0m
+[1;32m    360[0m             [0mReturns[0m [0mpredicted[0m [0mvalues[0m[0;34m.[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    361[0m         """
+[0;32m--> 362[0;31m         [0;32mreturn[0m [0mself[0m[0;34m.[0m[0m_decision_function[0m[0;34m([0m[0mX[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    363[0m [0;34m[0m[0m
+[1;32m    364[0m     [0m_preprocess_data[0m [0;34m=[0m [0mstaticmethod[0m[0;34m([0m[0m_preprocess_data[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m/usr/local/lib/python3.7/dist-packages/sklearn/linear_model/_base.py[0m in [0;36m_decision_function[0;34m(self, X)[0m
+[1;32m    343[0m         [0mcheck_is_fitted[0m[0;34m([0m[0mself[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    344[0m [0;34m[0m[0m
+[0;32m--> 345[0;31m         [0mX[0m [0;34m=[0m [0mself[0m[0;34m.[0m[0m_validate_data[0m[0;34m([0m[0mX[0m[0;34m,[0m [0maccept_sparse[0m[0;34m=[0m[0;34m[[0m[0;34m"csr"[0m[0;34m,[0m [0;34m"csc"[0m[0;34m,[0m [0;34m"coo"[0m[0;34m][0m[0;34m,[0m [0mreset[0m[0;34m=[0m[0;32mFalse[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    346[0m         [0;32mreturn[0m [0msafe_sparse_dot[0m[0;34m([0m[0mX[0m[0;34m,[0m [0mself[0m[0;34m.[0m[0mcoef_[0m[0;34m.[0m[0mT[0m[0;34m,[0m [0mdense_output[0m[0;34m=[0m[0;32mTrue[0m[0;34m)[0m [0;34m+[0m [0mself[0m[0;34m.[0m[0mintercept_[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    347[0m [0;34m[0m[0m
+
+[0;32m/usr/local/lib/python3.7/dist-packages/sklearn/base.py[0m in [0;36m_validate_data[0;34m(self, X, y, reset, validate_separately, **check_params)[0m
+[1;32m    564[0m             [0;32mraise[0m [0mValueError[0m[0;34m([0m[0;34m"Validation should be done on X, y or both."[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    565[0m         [0;32melif[0m [0;32mnot[0m [0mno_val_X[0m [0;32mand[0m [0mno_val_y[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[0;32m--> 566[0;31m             [0mX[0m [0;34m=[0m [0mcheck_array[0m[0;34m([0m[0mX[0m[0;34m,[0m [0;34m**[0m[0mcheck_params[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    567[0m             [0mout[0m [0;34m=[0m [0mX[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    568[0m         [0;32melif[0m [0mno_val_X[0m [0;32mand[0m [0;32mnot[0m [0mno_val_y[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py[0m in [0;36mcheck_array[0;34m(array, accept_sparse, accept_large_sparse, dtype, order, copy, force_all_finite, ensure_2d, allow_nd, ensure_min_samples, ensure_min_features, estimator)[0m
+[1;32m    771[0m                     [0;34m"Reshape your data either using array.reshape(-1, 1) if "[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    772[0m                     [0;34m"your data has a single feature or array.reshape(1, -1) "[0m[0;34m[0m[0;34m[0m[0m
+[0;32m--> 773[0;31m                     [0;34m"if it contains a single sample."[0m[0;34m.[0m[0mformat[0m[0;34m([0m[0marray[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    774[0m                 )
+[1;32m    775[0m [0;34m[0m[0m
+
+[0;31mValueError[0m: Expected 2D array, got 1D array instead:
+array=[].
+Reshape your data either using array.reshape(-1, 1) if your data has a single feature or array.reshape(1, -1) if it contains a single sample.
+ValueError: Expected 2D array, got 1D array instead:
+array=[].
+Reshape your data either using array.reshape(-1, 1) if your data has a single feature or array.reshape(1, -1) if it contains a single sample.
+
