@@ -168,6 +168,13 @@ const thebe_selector_output = ".output, .cell_output"
    </strong>
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Tugas%208.html">
+   <strong>
+    Tugas 8 - Esamble-Learning
+   </strong>
+  </a>
+ </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
@@ -533,7 +540,7 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-bc8502f3-abe7-440f-b0df-a9d510f368c2">
+  <div id="df-8a192166-4fd6-4fe4-b03d-997ff4f3ed99">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -604,7 +611,7 @@ title="Print to PDF"
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-bc8502f3-abe7-440f-b0df-a9d510f368c2')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-8a192166-4fd6-4fe4-b03d-997ff4f3ed99')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -655,12 +662,12 @@ title="Print to PDF"
 
       <script>
         const buttonEl =
-          document.querySelector('#df-bc8502f3-abe7-440f-b0df-a9d510f368c2 button.colab-df-convert');
+          document.querySelector('#df-8a192166-4fd6-4fe4-b03d-997ff4f3ed99 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-bc8502f3-abe7-440f-b0df-a9d510f368c2');
+          const element = document.querySelector('#df-8a192166-4fd6-4fe4-b03d-997ff4f3ed99');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -720,7 +727,7 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-522e393f-bd80-4bad-91c7-851e8c74dfde">
+  <div id="df-0c31ea96-a080-4e62-8991-e48a3ee17d26">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -785,7 +792,7 @@ title="Print to PDF"
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-522e393f-bd80-4bad-91c7-851e8c74dfde')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-0c31ea96-a080-4e62-8991-e48a3ee17d26')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -836,12 +843,12 @@ title="Print to PDF"
 
       <script>
         const buttonEl =
-          document.querySelector('#df-522e393f-bd80-4bad-91c7-851e8c74dfde button.colab-df-convert');
+          document.querySelector('#df-0c31ea96-a080-4e62-8991-e48a3ee17d26 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-522e393f-bd80-4bad-91c7-851e8c74dfde');
+          const element = document.querySelector('#df-0c31ea96-a080-4e62-8991-e48a3ee17d26');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -885,7 +892,14 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">test_size</span> <span class="o">=</span> <span class="n">percent_amount_of_test_data</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># print (y)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">test_size</span> <span class="o">=</span> <span class="n">percent_amount_of_test_data</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -905,23 +919,21 @@ title="Print to PDF"
 <span class="n">precision</span> <span class="o">=</span><span class="n">precision_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">Y_pred</span><span class="p">,</span><span class="n">average</span><span class="o">=</span><span class="s1">&#39;micro&#39;</span><span class="p">)</span>
 <span class="n">recall</span> <span class="o">=</span>  <span class="n">recall_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">Y_pred</span><span class="p">,</span><span class="n">average</span><span class="o">=</span><span class="s1">&#39;micro&#39;</span><span class="p">)</span>
 <span class="n">f1</span> <span class="o">=</span> <span class="n">f1_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span><span class="n">Y_pred</span><span class="p">,</span><span class="n">average</span><span class="o">=</span><span class="s1">&#39;micro&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Confusion matrix for Naive Bayes</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span><span class="n">cm</span><span class="p">)</span>
+
+<span class="nb">print</span> <span class="p">(</span><span class="n">accuracy_nb</span><span class="p">)</span>
+<span class="nb">print</span> <span class="p">(</span><span class="n">acc_gaussian</span><span class="p">)</span>
+<span class="c1"># print(&#39;Confusion matrix for Naive Bayes\n&#39;,cm)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;accuracy_Naive Bayes: </span><span class="si">%.3f</span><span class="s1">&#39;</span> <span class="o">%</span><span class="k">accuracy</span>)
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;precision_Naive Bayes: </span><span class="si">%.3f</span><span class="s1">&#39;</span> <span class="o">%</span><span class="k">precision</span>)
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;recall_Naive Bayes: </span><span class="si">%.3f</span><span class="s1">&#39;</span> <span class="o">%</span><span class="k">recall</span>)
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;f1-score_random_Forest : </span><span class="si">%.3f</span><span class="s1">&#39;</span> <span class="o">%</span><span class="k">f1</span>)
+<span class="c1"># print(&#39;precision_Naive Bayes: %.3f&#39; %precision)</span>
+<span class="c1"># print(&#39;recall_Naive Bayes: %.3f&#39; %recall)</span>
+<span class="c1"># print(&#39;f1-score_random_Forest : %.3f&#39; %f1)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Confusion matrix for Naive Bayes
- [[16  0  0]
- [ 0 18  0]
- [ 0  0 11]]
-accuracy_Naive Bayes: 1.000
-precision_Naive Bayes: 1.000
-recall_Naive Bayes: 1.000
-f1-score_random_Forest : 1.000
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>93.33
+97.14
+accuracy_Naive Bayes: 0.933
 </pre></div>
 </div>
 </div>
